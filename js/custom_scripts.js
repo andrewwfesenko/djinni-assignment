@@ -94,7 +94,7 @@ function fetchNewPhotos() {
 					    <div class="card">
 					      <img src="${photo.download_url}" class="card-img-top" alt="Photo">
 					      <div class="card-body p-3">
-					        <h2 class="card-title">${photo.author}</h2>
+					        <h2 class="card-title fw-bold">${photo.author}</h2>
 					        <p class="card-text">
 					          Here goes some sample, example text that is relatively short.
 					          Here goes some sample, example text that is relatively short.
