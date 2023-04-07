@@ -88,7 +88,7 @@ function fetchNewPhotos() {
 			const photoContainer = document.getElementById('photo_container');
 			if ( photoContainer ) {
 				data.forEach( photo => {
-					const photoDiv = document.createElement( 'div' );
+					let photoDiv = document.createElement( 'div' );
 					photoDiv.classList.add( 'col-12', 'col-md-6' );
 					photoDiv.innerHTML = `
 					    <div class="card">
@@ -97,7 +97,12 @@ function fetchNewPhotos() {
 					        <h2 class="card-title">${photo.author}</h2>
 					        <p class="card-text">
 					          Here goes some sample, example text that is relatively short.
+					          Here goes some sample, example text that is relatively short.
+					          Here goes some sample, example text that is relatively short.
 					        </p>
+					        <button type="button" class="btn text-dark-emphasis p-0 show-more d-none">
+								Show more...
+							</button>
 					      </div>
 					      <div class="card-footer bg-transparent py-3 px-2">
 					        <a href="#" class="btn btn-primary mx-2 fw-bold">
@@ -110,6 +115,7 @@ function fetchNewPhotos() {
 					    </div>
 				    `;
 					photoContainer.appendChild(photoDiv);
+					photoShowMoreText( photoDiv );
 				});
 			}
 
@@ -146,6 +152,10 @@ function photoShowMoreText( photo ) {
 }
 
 window.addEventListener('load', () => {
+	if ( ( window.innerHeight + window.scrollY ) >= document.body.offsetHeight ) {
+		fetchNewPhotos();
+	}
+
 	const photos = document.querySelectorAll('#photo_container .card');
 	if ( photos ) {
 		photos.forEach( photo => {
