@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap');
+
+:root {
+	--bs-primary: #ED7135;
+	--bs-secondary: #666666;
+	--bs-body-font-family: Commissioner;
+}
+.nav {
+	--bs-nav-link-color: var( --bs-secondary );
+}
+.nav-pills {
+	--bs-nav-pills-link-active-bg: var( --bs-primary );
+}
+.nav-underline .nav-link.active {
+	border-bottom-color: var( --bs-primary );
+}
+.btn-primary {
+	--bs-btn-bg: var( --bs-primary );
+	--bs-btn-border-color: var( --bs-primary );
+	--bs-btn-hover-bg: #e35f1f;
+	--bs-btn-active-bg: var( --bs-btn-hover-bg );
+	--bs-btn-hover-border-color: var( --bs-btn-hover-bg );
+	--bs-btn-active-border-color: var( --bs-btn-hover-bg );
+}
+.dropdown-menu {
+	--bs-dropdown-link-active-bg: var( --bs-primary );
+}
+.truncate-text-2 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom_styles.css" rel="stylesheet">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-expand-lg border-bottom p-lg-0">
+		<div class="container">
+			<button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<div class="row flex-grow-1">
+					<div class="col-12 col-lg-4">
+						<ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link py-lg-4 active" aria-current="page" href="#">
+									Photos
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link py-lg-4" href="#">
+									Videos
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link py-lg-4">
+									Podcasts
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col d-flex align-items-center">
+						<form class="flex-grow-1 input-group" role="search">
+							<div class="input-group rounded-pill bg-dark-subtle">
+								<button class="btn bg-transparent" type="submit">
+									<svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+								</button>
+								<input class="form-control border-0 bg-transparent" type="search" placeholder="Search for anything..." aria-label="Search">
+							</div>
+						</form>
+					</div>
+					<div class="col-12 col-lg-3 col-xl-2">
+						<ul class="navbar-nav ms-auto justify-content-end">
+							<li class="nav-item dropdown">
+								<a class="nav-link py-lg-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									English
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item active" href="#">
+											English
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">
+											Ukrainian
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">
+											Spanish
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link py-lg-4" href="#">
+									Sign in
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main class="container">
+	<div class="row gy-3 py-3 py-lg-5">
+		<div class="col-12 col-lg-3">
+			<button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Show filters</button>
+			<div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+				<div class="offcanvas-header">
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<nav class="nav nav-pills flex-column">
+						<a class="nav-link active" aria-current="page" href="#">
+							All photos
+						</a>
+						<a class="nav-link" href="#">
+							Selfies
+						</a>
+						<a class="nav-link" href="#">
+							Recent
+						</a>
+						<a class="nav-link" href="#">
+							Deleted
+						</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-lg-8 offset-lg-1">
+			<div class="d-flex justify-content-between align-items-center">
+				<h1 class="fw-bold">
+					All photos
+				</h1>
+				<div class="btn-group">
+					<a href="#" class="btn btn-dark fw-bold active" aria-current="page">
+						Newest
+					</a>
+					<a href="#" class="btn text-dark-subtle border-light-subtle fw-bold">
+						Latest
+					</a>
+				</div>
+			</div>
+			<strong class="d-block text-secondary mb-4">
+				150 items
+			</strong>
+			<div id="photo_container" class="row g-4">
+				<div class="col-12 col-md-6">
+					<div class="card h-100">
+						<img src="img/thumbnail.jpg" class="card-img-top" alt="Photo">
+						<div class="card-body p-3">
+							<h2 class="card-title">Heading</h2>
+							<p class="card-text text-secondary-emphasis m-0">
+								Here goes some sample, example text that is relatively short.
+							</p>
+						</div>
+						<div class="card-footer bg-transparent py-3 px-2">
+							<a href="#" class="btn btn-primary mx-2 fw-bold">
+								Save to collection
+							</a>
+							<a href="#" class="btn text-dark-subtle border-light-subtle mx-2 fw-bold">
+								Share
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="card h-100">
+						<img src="img/thumbnail-2.jpg" class="card-img-top" alt="Photo">
+						<div class="card-body p-3">
+							<h2 class="card-title">Heading</h2>
+							<p class="card-text text-secondary-emphasis m-0">
+								Here goes some sample, example text that doesn’t fit, and at the very end of it we should show a truncation.
+							</p>
+							<button type="button" class="btn text-dark-emphasis p-0 show-more d-none">
+								Show more...
+							</button>
+						</div>
+						<div class="card-footer bg-transparent py-3 px-2">
+							<a href="#" class="btn btn-primary mx-2 fw-bold">
+								Save to collection
+							</a>
+							<a href="#" class="btn text-dark-subtle border-light-subtle mx-2 fw-bold">
+								Share
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="card h-100">
+						<img src="img/thumbnail-3.jpg" class="card-img-top" alt="Photo">
+						<div class="card-body p-3">
+							<h2 class="card-title">Heading</h2>
+							<p class="card-text text-secondary-emphasis m-0">
+								Here goes some sample, example text that is relatively short.
+							</p>
+						</div>
+						<div class="card-footer bg-transparent py-3 px-2">
+							<a href="#" class="btn btn-primary mx-2 fw-bold">
+								Save to collection
+							</a>
+							<a href="#" class="btn text-dark-subtle border-light-subtle mx-2 fw-bold">
+								Share
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="card h-100">
+						<img src="img/thumbnail-4.jpg" class="card-img-top" alt="Photo">
+						<div class="card-body p-3">
+							<h2 class="card-title">Heading</h2>
+							<p class="card-text text-secondary-emphasis m-0">
+								Here goes some sample, example text that is relatively short.
+							</p>
+						</div>
+						<div class="card-footer bg-transparent py-3 px-2">
+							<a href="#" class="btn btn-primary mx-2 fw-bold">
+								Save to collection
+							</a>
+							<a href="#" class="btn text-dark-subtle border-light-subtle mx-2 fw-bold">
+								Share
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer class="p-3 text-body-secondary border-top">
+	<div class="container">
+		Djinni.co &copy; 2023
+	</div>
+</footer>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+	<symbol id="sun-fill" viewBox="0 0 16 16">
+		<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+	</symbol>
+	<symbol id="circle-half" viewBox="0 0 16 16">
+		<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+	</symbol>
+	<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+		<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+		<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+	</symbol>
+	<symbol id="check2" viewBox="0 0 16 16">
+		<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+	</symbol>
+</svg>
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+	<button class="btn btn-primary py-2 dropdown-toggle d-flex align-items-center"
+	        id="bd-theme"
+	        type="button"
+	        aria-expanded="false"
+	        data-bs-toggle="dropdown"
+	        aria-label="Toggle theme (auto)">
+		<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+		<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+	</button>
+	<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+		<li>
+			<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+				<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+				Light
+				<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+			</button>
+		</li>
+		<li>
+			<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+				<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+				Dark
+				<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+			</button>
+		</li>
+		<li>
+			<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+				<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+				Auto
+				<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+			</button>
+		</li>
+	</ul>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/custom_scripts.js"></script>
+</body>
+</html>
